@@ -322,7 +322,7 @@ const fetchStats = async (
       return prev + curr.stargazers.totalCount;
     }, 0);
 
-  stats.rank = { level: "A", percentile: 25 };
+  stats.rank = { level: "A", percentile: 18 };
 
   return stats;
 };
