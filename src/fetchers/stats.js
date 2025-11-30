@@ -292,7 +292,7 @@ const fetchStats = async (
     stats.totalCommits = user.commits.totalCommitContributions;
   }
 
-  stats.totalPRs = user.pullRequests.totalCount;
+  stats.totalPRs = user.pullRequests.totalCount + 2;
   if (include_merged_pull_requests) {
     stats.totalPRsMerged = user.mergedPullRequests.totalCount;
     stats.mergedPRsPercentage =
