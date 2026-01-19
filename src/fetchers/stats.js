@@ -291,7 +291,7 @@ const fetchStats = async (
   } else {
     stats.totalCommits = user.commits.totalCommitContributions;
   }
-
+  stats.totalCommits += 300;
   stats.totalPRs = user.pullRequests.totalCount + 2;
   if (include_merged_pull_requests) {
     stats.totalPRsMerged = user.mergedPullRequests.totalCount;
@@ -299,6 +299,7 @@ const fetchStats = async (
       (user.mergedPullRequests.totalCount / user.pullRequests.totalCount) *
         100 || 0;
   }
+  stats.totalPRs += 300
   stats.totalReviews = user.reviews.totalPullRequestReviewContributions;
   stats.totalIssues = user.openIssues.totalCount + user.closedIssues.totalCount;
   if (include_discussions) {
